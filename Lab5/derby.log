@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Mar 06 21:14:13 EST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0170-b2c5-8101-00000715de38 
+on database directory /Users/austinzhang/Desktop/2SEM2YR/SE2203/Lab5/TeamDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@3b07d329 
+Loaded from file:/Users/austinzhang/Desktop/2SEM2YR/SE2203/Lab5/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13+33
+user.dir=/Users/austinzhang/Desktop/2SEM2YR/SE2203/Lab5
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.15.3
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

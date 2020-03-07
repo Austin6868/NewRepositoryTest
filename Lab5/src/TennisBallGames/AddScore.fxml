@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TennisBallGames.AddScoreController">
+   <children>
+      <Label layoutX="181.0" layoutY="43.0" text="Add Match Score">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <VBox layoutX="78.0" layoutY="161.0" prefHeight="153.0" prefWidth="445.0">
+         <children>
+            <HBox prefHeight="54.0" prefWidth="445.0" spacing="167.0">
+               <children>
+                  <Label text="Match">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="matchBox" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="445.0" spacing="100.0">
+               <children>
+                  <Label text="Home Team Score">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="homeTeamField" />
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="417.0" spacing="100.0">
+               <children>
+                  <Label text="Visitor Team Score">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="visitorTeamField" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="301.0" layoutY="331.0" prefHeight="27.0" prefWidth="208.0" spacing="100.0">
+         <children>
+            <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+            <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#save" text="Save" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
