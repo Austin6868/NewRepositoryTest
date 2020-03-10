@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -42,13 +40,13 @@ public class AddTeamController implements Initializable {
     @FXML
     public void cancel() {
         Stage stage = (Stage) cancelBtn.getScene().getWindow();
-        stage.close();
+        stage.close();// this is for when want to leave no changes to the database
     }
 
     @FXML
     public void save() {
         try {
-            teamsAdapter.insertTeam(teamName.getText());
+            teamsAdapter.insertTeam(teamName.getText());//insert the team name from the text field
         } catch (SQLException ex) {
             displayAlert("ERROR: " + ex.getMessage());
         }

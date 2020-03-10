@@ -25,7 +25,7 @@ import java.util.ResourceBundle;
 
 public class AddScoreController implements Initializable {
 
-
+//declare the scene objects we want to use
     @FXML
     ComboBox matchBox;
     @FXML
@@ -64,7 +64,7 @@ public class AddScoreController implements Initializable {
             String hName = "";
             String vName = "";
             String text = matchBox.getSelectionModel().getSelectedItem().toString();
-            int comboBoxIndex = Integer.valueOf(text.charAt(0))-48;
+            int comboBoxIndex = Integer.valueOf(text.charAt(0))-48;//extract the team names from the combo box
             int hNameIndex = matchBox.getSelectionModel().getSelectedItem().toString().indexOf("-");
             int vNameIndex = matchBox.getSelectionModel().getSelectedItem().toString().indexOf("    -");
             hName = text.substring(hNameIndex + 1, vNameIndex).replaceAll("\\s","");
@@ -73,8 +73,8 @@ public class AddScoreController implements Initializable {
             //System.out.println("hName index is " + hNameIndex + "vName index is" + vNameIndex);
             int hScore = Integer.valueOf(homeTeamField.getText());
             int vScore = Integer.valueOf(visitorTeamField.getText());
-            teamsAdapter.setStatus(hName , vName , hScore , vScore);
-            matchesAdapter.setTeamsScore( comboBoxIndex,hScore , vScore);
+            teamsAdapter.setStatus(hName , vName , hScore , vScore);//update the team status
+            matchesAdapter.setTeamsScore( comboBoxIndex,hScore , vScore);//update the team scores
             //System.out.println(Integer.valueOf(text.charAt(0)));
         } catch (SQLException ex) {
             displayAlert("ERROR: " + ex.getMessage());

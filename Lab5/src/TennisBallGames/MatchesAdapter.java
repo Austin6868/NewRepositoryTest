@@ -87,7 +87,7 @@ public class MatchesAdapter {
         // Execute the statement and return the result
         rs = stmt.executeQuery(sqlStatement);
         // Add your code here for Task #2
-        while (rs.next()) {
+        while (rs.next()) {//get the information from all the teams stored in SQL
             matchesList.add(new Matches(rs.getInt("matchNumber"),
                     rs.getString("homeTeam"),
                     rs.getString("visitorTeam"),
@@ -129,9 +129,8 @@ public class MatchesAdapter {
    {
         // Add your code here for Task #4
        Statement stmt = connection.createStatement();
-       String sqlStatement = "SELECT * FROM Matches";
        stmt.executeUpdate("UPDATE Matches SET HomeTeamScore = "+hScore+", VisitorTeamScore = "+vScore+" WHERE MatchNumber = "+matchNumber);
-
+        // this is where we set the team score using UPDATE command when the function is called
 
    }
 

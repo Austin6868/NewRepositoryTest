@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,14 +11,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -57,8 +50,8 @@ public class AddMatchController implements Initializable {
 
         // Do some work here
         try{
-            matchesAdapter.insertMatch(matchesAdapter.getMax() + 1 ,
-                    homeTeamBox.getSelectionModel().getSelectedItem().toString(),
+            matchesAdapter.insertMatch(matchesAdapter.getMax() + 1 ,//get the match number with the max number
+                    homeTeamBox.getSelectionModel().getSelectedItem().toString(), //get the select team name from the combo box
                     visitorTeamBox.getSelectionModel().getSelectedItem().toString());//add home team and visitor team
         } catch (SQLException ex) {
             displayAlert("ERROR: " + ex.getMessage());

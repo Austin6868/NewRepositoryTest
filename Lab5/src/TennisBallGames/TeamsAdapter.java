@@ -106,6 +106,7 @@ public class TeamsAdapter {
 
     public void setStatus(String hTeam, String vTeam, int hScore, int vScore) throws SQLException {
         // Create a Statement object
+        //initialize the original data of both teams we are trying to modify
         int winsHome = 0;
         int lossesHome = 0;
         int winsVisitor = 0;
@@ -117,23 +118,23 @@ public class TeamsAdapter {
         String query = "SELECT * FROM Teams WHERE TeamName = '" + hTeam + "'";
         rs = stmt.executeQuery(query);
         while (rs.next()) {
-            winsHome = rs.getInt("Wins");
-            lossesHome = rs.getInt("Losses");
-            tiesHome = rs.getInt("Ties");
-            System.out.println(winsHome);
-            System.out.println(lossesHome);
+            winsHome = rs.getInt("Wins");//get the original win count of the specified team
+            lossesHome = rs.getInt("Losses");//get the original lose count of the specified team
+            tiesHome = rs.getInt("Ties");//get the original tie count from the specified team
+            //System.out.println(winsHome);
+            //System.out.println(lossesHome);
         }
         query = "SELECT * FROM Teams WHERE TeamName = '" + vTeam + "'";
         rs = stmt.executeQuery(query);
         while (rs.next()){
-            winsVisitor = rs.getInt("Wins");
-            lossesVisitor = rs.getInt("Losses");
-            tiesVisitor = rs.getInt("Ties");
+            winsVisitor = rs.getInt("Wins");//get the original win count of the specified team
+            lossesVisitor = rs.getInt("Losses");//get the original lose count of the specified team
+            tiesVisitor = rs.getInt("Ties");//get the original tie count from the specified team
             //System.out.println(winsVisitor);
             //System.out.println(lossesVisitor);
         }
         // Write your code here for Task #4
-        if (hScore > vScore){
+        if (hScore > vScore){//these are the if statements used for identifying the winning team, losing team and tie.
             stmt.executeUpdate("UPDATE Teams SET Wins = "+(winsHome + 1)+", Losses = "+lossesHome+" WHERE TeamName = '" + hTeam + "'");
             stmt.executeUpdate("UPDATE Teams SET Wins = "+(winsVisitor)+", Losses = "+(lossesVisitor+1)+" WHERE TeamName = '" + vTeam + "'");
         }else if (vScore > hScore){
