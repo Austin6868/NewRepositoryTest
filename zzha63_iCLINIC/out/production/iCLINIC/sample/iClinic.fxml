@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="677.0" styleClass="bodybg" stylesheets="@Background.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#closeProgramEvent" text="Close" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="iCLINIC Board">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="View Patients" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="My Board">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Assign Patients" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Patients Records">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Add New Patient" />
+                  <MenuItem mnemonicParsing="false" text="Edit/Delete Patient" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Manage Documents">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Create Documents" />
+                  <MenuItem mnemonicParsing="false" text="Manage Documents" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Pallete" />
+            <Menu mnemonicParsing="false" text="Manage Users">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#showAddWorker" text="Create New Worker" />
+                  <MenuItem mnemonicParsing="false" onAction="#showEditAndDeleteWorker" text="Edit/Delete Worker" />
+                  <MenuItem mnemonicParsing="false" onAction="#resetDB" text="reset" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#listenerEvent" text="About Us" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

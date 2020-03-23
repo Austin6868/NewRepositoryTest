@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Mar 22 20:39:22 EDT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0171-04d4-6bbd-000007051fb0 
+on database directory /Users/austinzhang/Downloads/zzha63_iCLINIC/iCLINICDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@3b07d329 
+Loaded from file:/Users/austinzhang/Downloads/zzha63_iCLINIC/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13+33
+user.dir=/Users/austinzhang/Downloads/zzha63_iCLINIC
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.15.3
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

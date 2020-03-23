@@ -1,0 +1,4 @@
+.bodybg{
+    -fx-background-image: url("/sample/resources/westernbackground.png");
+   -fx-background-size: 100% 100%;
+}
